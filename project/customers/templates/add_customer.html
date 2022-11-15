@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block title %}add customer{% endblock %}
+{% block head %}
+{{ super() }}
+{% endblock %}
+{% block content %}
+
+<div class="d-flex justify-content-center">
+    <h2>add customer</h2>
+</div>
+
+<div class="d-flex justify-content-center">
+    {% if customer_add == True %}
+    <h5 style="color: red;"> customer add Successfully </h5>
+    {% endif %}
+</div>
+<br>
+
+<form action="{{ url_for('customers.add_customer') }}" method="POST">
+    <label for="customer_name">customer name: </label>
+    <input type="string" name="customer_name" id="customer_name" placeholder="customer_name" required> <br><br>
+    <label for="city">city: </label>
+    <input type="string" name="city" id="city" placeholder="city" required> <br><br>
+    <label for="age">age: </label>
+    <input type="number" name="age" id="age" placeholder="age" required min="0"> <br><br>
+    <h6>Enter the customer name here <br> make sure to write in lowercase letters and separates the words with _ <br>
+        (optional) </h6> <br>
+    <label for="customer_image"> image: </label>
+    <input type="string" name="customer_image" id="customer_image">
+
+    <button type="submit">save</button> </form>
+   
+    {% endblock %}
