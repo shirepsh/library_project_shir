@@ -38,15 +38,16 @@ python -m virtualenv venv
 ```bash
 venv\Scripts\active
 ```
-5. install all the right packages with the requirements file
+5. cd to project 
+6. install all the right packages with the requirements file
 ```bash
 pip install -r requirements.txt  
 ``` 
-6. run the application by the comment:
+7. run the application by the comment:
 ```
 py app.py
 ```
-7. once the code is active press ctrl+ click on the link that created ("http://127.0.0.1:5000")
+8. once the code is active press ctrl+ click on the link that created ("http://127.0.0.1:5000")
 ### **The structure of the project**
 the project build from:
 - **instance folder** - contain the db
